@@ -22,20 +22,22 @@ while True:
     random_number = int(input("Enter a number: "))
     data_entered.append(random_number)  # This will store the first number.
 
+   # Check if the last entered `another` number was greater than 50 to exit Loop 1 as well.
+    if random_number > 50:
+        print("Invalid")
+        break  # This will stop loop 1.
+
     # Loop2: To ask for another number.
     while True:
         another = int(input("Enter a number: "))
         
-        data_entered.append(another)  # This will the store the other numbers inputted.
+        data_entered.append(another)  # This will store the other numbers inputted.
 
         if another > 50:
+            print("Invalid")
             break  # This will stop loop 2.
 
-    # Check if the last entered `another` number was greater than 50 to exit Loop 1 as well.
-    if another > 50:
-        break  # This will stop loop 1.
-
-print("Data entered:", data_entered)
+    print("Data entered:", data_entered)
 
         
 
